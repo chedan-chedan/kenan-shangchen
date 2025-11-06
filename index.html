@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="小兔鲜儿官网，致力于打造全球最大的食品、生鲜电商购物平台。" />
+    <meta name="keywords" content="小兔鲜儿,食品,生鲜,服装,家电,电商,购物" />
+    <title>小兔鲜儿-新鲜、惠民、快捷！</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+    <style>
+/* ==================== 基础样式重置 ==================== */
+/* 重置所有元素的默认边距和内边距 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,input {
+    margin: 0;
+    padding: 0
+}
+
+/* 设置盒模型为border-box，便于布局计算 */
+* {
+    box-sizing: border-box
+}
+
+/* 设置基础字体和颜色 */
+body {
+    font: 16px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #333
+}
+
+/* 移除列表默认样式 */
+ul,ol {
+    list-style: none
+}
+
+/* 设置斜体文字为正常样式 */
+em,i {
+    font-style: normal
+}
+
+/* 设置链接基础样式 */
+a {
+    text-decoration: none;
+    color: #333
+}
+
+/* 设置图片垂直对齐方式 */
+img {
+    vertical-align: middle
+}
+
+/* 设置输入框基础样式 */
+input {
+    border: none;
+    outline: none;
+    color: #333
+}
+
+/* 浮动工具类 */
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+/* 清除浮动工具类 */
+.clearfix::before,.clearfix::after {
+    content: "";
+    display: table
+}
+
+.clearfix::after {
+    clear: both
+}
+
+/* ==================== 通用布局样式 ==================== */
+/* 页面内容容器，设置固定宽度并居中 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto
+}
+
+/* ==================== 快捷导航区域 ==================== */
+.shortcut {
+    height: 52px;
+    background-color: #333
+}
+
+.shortcut .wrapper {
+    height: 52px
+}
+
+.shortcut .wrapper ul {
+    float: right
+}
+
+.shortcut .wrapper li {
+    float: left;
+    line-height: 52px
+}
+
+.shortcut .wrapper li:last-child a {
+    border-right: 0
+}
+
+.shortcut .wrapper li a {
+    padding: 0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc
+}
+
+.shortcut .wrapper li a span {
+    display: inline-block;
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background-image: url(./精灵图.PNG);
+    background-position: -160px -70px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+
+/* ==================== 网站头部区域 ==================== */
+.header {
+    margin: 30px auto;
+    height: 70px
+}
+
+.header .logo {
+    float: left;
+    margin-right: 40px;
+    width: 207px;
+    height: 70px
+}
+
+.header .logo h1 {
+    width: 207px;
+    height: 70px;
+    font-size: 0
+}
+
+.header .logo h1 a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    background: url('logo.png') no-repeat center center;
+    background-size: cover;
+}
+
+.header .nav {
+    float: left
+}
+
+.header .nav li {
+    float: left;
+    margin-right: 48px
+}
+
+.header .nav li a {
+    line-height: 70px;
+    padding-bottom: 7px
+}
+
+.header .nav li a:hover {
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b
+}
+
+.header .search {
+    position: relative;
+    float: left;
+    margin-top: 24px;
+    margin-left: 34px;
+    width: 172px;
+    height: 30px;
+    border-bottom: 1px solid #e7e7e7
+}
+
+.header .search input {
+    padding-left: 30px;
+    width: 172px;
+    height: 29px
+}
+
+.header .search input::placeholder {
+    color: #ccc
+}
+
+.header .search span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url(./精灵图.PNG);
+    background-position: -79px -69px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.header .car {
+    position: relative;
+    float: right;
+    margin: 28px 15px
+}
+
+.header .car a {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-image: url(./精灵图.PNG);
+    background-position: -120px -69px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.header .car span {
+    position: absolute;
+    right: -12px;
+    top: -5px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 13px;
+    color: #fff
+}
+
+/* ==================== 轮播图区域 ==================== */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px
+}
+
+.banner .wrapper img {
+    width: 100%; /* 宽度铺满轮播容器 */
+    height: 500px; /* 图片高度设置为你需要的尺寸（比如600px） */
+    object-fit: cover; /* 保持图片比例，避免拉伸变形 */
+}
+
+.banner .wrapper .aside {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.banner .wrapper .aside ul {
+    width: 251px;
+    height: 500px;
+    background-color: rgba(0,0,0,.8)
+}
+
+.banner .wrapper .aside ul a {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    padding-right: 19px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff
+}
+
+.banner .wrapper .aside ul a:hover {
+    background-color: #27ba9b
+}
+
+.banner .wrapper .aside ul a span {
+    padding-left: 15px;
+    font-size: 14px
+}
+
+/* 左侧导航箭头样式 */
+.banner .wrapper .aside ul a span::after {
+    position: absolute;
+    top: 20px; /* 微调垂直位置，适配1.5px边框的箭头高度 */
+    right: 20px;
+    content: "";
+    width: 5px; /* 宽度略增，配合1.5px边框保持比例 */
+    height: 5px; /* 高度略增，与宽度匹配 */
+    border-right: 1.5px solid #ffffffda; /* 边框设为1.5px，比1px稍粗，比2px细 */
+    border-top: 1.5px solid #ffffffda;
+    transform: rotate(45deg);
+    background: none;
+}
+
+/* 轮播图箭头样式 */
+.banner .wrapper .prev, .banner .wrapper .next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 44px;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner .wrapper .prev::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: translate(-25%, -50%) rotate(45deg);
+}
+
+.banner .wrapper .next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: translate(-75%, -50%) rotate(45deg);
+}
+
+.banner .wrapper .prev {
+    left: 260px;
+    background-position: -230px 0;
+}
+
+.banner .wrapper .next {
+    right: 10px;
+    background-position: -185px 0;
+}
+
+/* 轮播图指示器样式 */
+.banner .wrapper ol {
+    position: absolute;
+    left: 680px;
+    bottom: 31px;
+    height: 10px
+}
+
+.banner .wrapper ol li {
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,.43);
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.banner .wrapper ol .current {
+    background-color: #fff
+}
+
+/* ==================== 新鲜好物区域 ==================== */
+.goods .hd {
+    height: 114px;
+    line-height: 114px
+}
+
+.goods .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px
+}
+
+.goods .hd span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999
+}
+
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    text-align: center;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4
+}
+
+.goods .bd li:last-child {
+    margin-right: 0
+}
+
+.goods .bd li a img {
+    width: 304px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.goods .bd li a h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400
+}
+
+.goods .bd li a div {
+    font-size: 17px;
+    color: #9a2e1f
+}
+
+.goods .bd li a div span {
+    font-size: 23px
+}
+
+.goods .bd li a p {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 28px;
+    height: 51px;
+    color: #27ba9b;
+    border: 2px solid #27ba9b;
+    border-radius: 5px
+}
+
+.goods .hd a {
+    float: right;
+    color: #999
+}
+
+/* ==================== 人气推荐区域 ==================== */
+.popularity .hd {
+    height: 115px;
+    line-height: 115px
+}
+
+.popularity .hd h2 {
+    font-weight: 400;
+    font-size: 29px;
+    color: #333
+}
+
+.popularity .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999
+}
+
+.popularity .bd li {
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px
+}
+
+.popularity .bd li:last-child {
+    margin-right: 0
+}
+
+.popularity .bd li a {
+    display: inline-block;
+    width: 304px;
+    height: 405px;
+    text-align: center
+}
+
+.popularity .bd li a img {
+    width: 304px;
+    height: 305px;
+    object-fit: cover;
+}
+
+.popularity .bd li a h3 {
+    padding-top: 20px;
+    font-size: 21px;
+    font-weight: 400;
+    color: #333
+}
+
+.popularity .bd li a span {
+    padding-top: 15px;
+    color: #999
+}
+
+/* ==================== 热门品牌区域 ==================== */
+.popular {
+    height: 466px;
+    background-color: #f5f5f5
+}
+
+.popular .hd {
+    height: 115px;
+    line-height: 115px
+}
+
+.popular .hd h3 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400
+}
+
+.popular .hd p {
+    float: left;
+    margin-left: 34px;
+    color: #999
+}
+
+.popular .hd a {
+    float: right;
+    margin-top: 79px;
+    width: 30px;
+    height: 30px;
+    background-color: #e2e2e2;
+    position: relative;
+}
+
+.popular .hd .left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: translate(-30%, -50%) rotate(45deg);
+}
+
+.popular .hd .right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #666;
+    border-top: 2px solid #666;
+    transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.popular .hd a:hover {
+    background-color: #27ba9b;
+}
+
+.popular .hd a:hover::before {
+    border-color: white;
+}
+
+.popular .hd .left {
+    margin-right: 12px;
+    background-position: -105px -320px;
+}
+
+.popular .hd .right {
+    margin-right: 3px;
+    background-position: -80px -320px;
+}
+
+.popular .bd {
+    background-color: #fff
+}
+
+.popular .bd li {
+    float: left;
+    margin-right: 4px
+}
+
+.popular .bd li:last-child {
+    margin-right: 0
+}
+
+.popular .bd li img {
+    width: 244px;
+    height: 313px;
+    object-fit: cover;
+}
+
+/* ==================== 分类商品区通用样式 ==================== */
+/* 适用于生鲜和服饰分类页面 */
+.fresh_produce .hd, .clothes_goods .hd {
+    height: 96px;
+    line-height: 96px
+}
+
+.fresh_produce .hd h2, .clothes_goods .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400
+}
+
+.fresh_produce .hd ul, .clothes_goods .hd ul {
+    float: right;
+    margin-right: 65px
+}
+
+.fresh_produce .hd ul li, .clothes_goods .hd ul li {
+    float: left
+}
+
+.fresh_produce .hd ul li a, .clothes_goods .hd ul li a {
+    padding: 2px 7px;
+    margin: 0 6px
+}
+
+.fresh_produce .hd ul li a:hover, .clothes_goods .hd ul li a:hover {
+    color: #fefbfc;
+    background-color: #27ba9b
+}
+
+.fresh_produce .bd, .clothes_goods .bd {
+    position: relative;
+}
+
+.fresh_produce .bd .left, .clothes_goods .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px
+}
+
+.fresh_produce .bd .left .box, .clothes_goods .bd .left .box {
+    position: absolute;
+    bottom: 197px;
+    left: 0;
+    width: 189px;
+    height: 67px;
+    line-height: 67px;
+    text-align: center;
+    color: #fff
+}
+
+.fresh_produce .bd .left .box .one span, .clothes_goods .bd .left .box .one span {
+    float: left;
+    width: 76px;
+    height: 67px;
+    background-color: #000
+}
+
+.fresh_produce .bd .left .box .two span, .clothes_goods .bd .left .box .two span {
+    float: left;
+    width: 113px;
+    height: 67px;
+    background: rgba(0,0,0,.8)
+}
+
+.fresh_produce .bd .left img, .clothes_goods .bd .left img {
+    width: 243px;
+    height: 610px;
+    object-fit: cover;
+}
+
+.fresh_produce .bd .right, .clothes_goods .bd .right {
+    float: right;
+    width: 1000px;
+    height: 610px
+}
+
+.fresh_produce .bd .right li, .clothes_goods .bd .right li {
+    float: left;
+    margin-left: 8px;
+    margin-bottom: 2px
+}
+
+.fresh_produce .bd .right li a, .clothes_goods .bd .right li a {
+    display: inline-block;
+    padding-left: 29px;
+    width: 240px;
+    height: 302px
+}
+
+.fresh_produce .bd .right li a:hover, .clothes_goods .bd .right li a:hover {
+    color: #27ba9b
+}
+
+.fresh_produce .bd .right li img, .clothes_goods .bd .right li img {
+    margin: 8px 0;
+    width: 184px;
+    height: 184px;
+    object-fit: cover;
+}
+
+.fresh_produce .bd .right li div, .clothes_goods .bd .right li div {
+    padding-bottom: 2px;
+    font-size: 17px;
+    color: #9a2e1f
+}
+
+.fresh_produce .bd .right li div span, .clothes_goods .bd .right li div span {
+    font-size: 23px
+}
+
+/* ==================== 最新专题区域 ==================== */
+.topic_goods {
+    height: 512px;
+    background-color: #f5f5f5
+}
+
+.topic_goods .hd {
+    height: 115px;
+    line-height: 115px
+}
+
+.topic_goods .hd h3 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400
+}
+
+.topic_goods .bd {
+    height: 356px
+}
+
+.topic_goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 11px
+}
+
+.topic_goods .bd li:last-child {
+    margin-right: 0
+}
+
+.topic_goods .bd li img {
+    width: 406px;
+    height: 228px;
+    object-fit: cover;
+}
+
+.topic_goods .bd li a {
+    display: inline-block;
+    height: 295px;
+    background-color: #fff
+}
+
+.topic_goods .bd li .box {
+    position: absolute;
+    bottom: 67px;
+    left: 0;
+    width: 406px;
+    height: 146px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0))
+}
+
+.topic_goods .bd li .box p {
+    position: absolute;
+    bottom: 46px;
+    left: 15px;
+    color: #fff
+}
+
+.topic_goods .bd li .box div {
+    position: absolute;
+    left: 14px;
+    bottom: 17px;
+    color: #999
+}
+
+.topic_goods .bd li .box span {
+    position: absolute;
+    bottom: 29px;
+    right: 15px;
+    width: 81px;
+    height: 27px;
+    background-color: #fff;
+    text-align: center;
+    color: #9a2e1f
+}
+
+.topic_goods .bd li .bottom {
+    line-height: 68px
+}
+
+.topic_goods .bd li .bottom span::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+}
+
+/* 专题区域爱心图标红色样式 */
+.topic_goods .bd li .bottom span i.ri-heart-fill.red {
+    color: #ff0000; /* 红色（与你页面中已有红色系保持一致） */
+    font-size: 16px;
+    margin-right: 20x;
+}
+
+.topic_goods .bd li .bottom .right {
+    float: right;
+    margin-right: 19px
+}
+
+/* ==================== 服务区域 ==================== */
+.service {
+    padding: 79px 0 79px 58px;
+    height: 302px;
+    text-align: center;
+    color: #999;
+    font-size: 14px
+}
+
+.service h4 {
+    font-weight: 400
+}
+
+.service .customer, .service .about {
+    float: left;
+    margin-right: 118px;
+    width: 192px;
+    height: 143px
+}
+
+.service .customer h4, .service .about h4 {
+    margin-bottom: 30px
+}
+
+.service .customer li a, .service .about li a {
+    float: left;
+    margin-right: 3px;
+    padding-top: 15px;
+    width: 93px;
+    height: 93px;
+    border: 1px solid #eee;
+    color: #999
+}
+
+.service .customer li a:hover, .service .about li a:hover {
+    color: #27ba9b
+}
+
+.service .customer li .size, .service .about li .size {
+    color: #666;
+    font-size: 29px
+}
+
+.service .download {
+    float: left;
+    width: 274px;
+    height: 189px;
+    border-right: 2px solid #f2f2f2
+}
+
+.service .download h4 {
+    margin-bottom: 24px
+}
+
+.service .download .left {
+    float: left;
+    position: relative;
+    width: 116px;
+    height: 116px;
+    border: 2px solid #f3f3f3
+}
+
+.service .download .left .size {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 105px;
+    color: #000
+}
+
+.service .download .right {
+    float: right;
+    margin-right: 20px;
+    width: 116px;
+    height: 116px
+}
+
+.service .download .right h4 {
+    margin-bottom: 8px
+}
+
+.service .download .right a {
+    display: inline-block;
+    margin-top: 40px;
+    width: 103px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    color: #999
+}
+
+.service .download .right a:hover {
+    color: #fff;
+    background-color: #27ba9b
+}
+
+.service .phone {
+    float: right;
+    margin-right: 76px;
+    width: 160px;
+    height: 122px
+}
+
+.service .phone h4 {
+    margin-bottom: 46px
+}
+
+.service .phone span {
+    font-size: 22px;
+    color: #666
+}
+
+.service .phone p {
+    font-size: 15px
+}
+
+/* ==================== 通用更多按钮样式 ==================== */
+.fresh_produce .more, .clothes_goods .more, .topic_goods .more {
+    float: right;
+    color: #999
+}
+
+/* ==================== 页脚版权区域 ==================== */
+.footer {
+    height: 342px;
+    background-color: #333
+}
+
+.footer .wrapper {
+    width: 1393px
+}
+
+.footer .wrapper .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 3px solid #434343
+}
+
+.footer .wrapper .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+    line-height: 58px
+}
+
+.footer .wrapper .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff
+}
+
+.footer .wrapper .top li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-image: url(./精灵图.PNG);
+    background-color: transparent;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+
+.footer .wrapper .top li:first-child::before {
+    background-position: 0 0;
+}
+
+.footer .wrapper .top li:nth-child(2)::before {
+    background-position: -130px 0;
+}
+
+.footer .wrapper .top li:last-child::before {
+    background-position: -65px 0;
+}
+
+.footer .wrapper .top li:last-child {
+    margin-right: 0
+}
+
+.footer .wrapper .bottom {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #999
+}
+
+.footer .wrapper .bottom a {
+    font-size: 14px;
+    color: #999
+}
+
+.footer .wrapper .bottom p {
+    margin-bottom: 20px
+}
+</style>
+</head>
+<body>
+    <!-- 快捷导航 -->
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul>
+                <li><a href="#">请先登录</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="./personal_center.html">我的订单</a></li>
+                <li><a href="#">会员中心</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li>
+                    <a href="#"><span></span>手机版</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <div class="header wrapper">
+        <div class="logo">
+            <h1><a href="#"></a></h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">生鲜</a></li>
+                <li><a href="#">美食</a></li>
+                <li><a href="#">餐厨</a></li>
+                <li><a href="#">电器</a></li>
+                <li><a href="#">居家</a></li>
+                <li><a href="#">洗护</a></li>
+                <li><a href="#">孕婴</a></li>
+                <li><a href="#">服装</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="25216950114林盛锦" />
+            <span></span>
+        </div>
+        <div class="car">
+            <a href="#"><span></span></a>
+            <span>2</span>
+        </div>
+    </div>
+
+    <!-- 轮播区域 -->
+    <div class="banner">
+        <div class="wrapper">
+            <ul>
+                <li>
+                    <a href="#"><img src="3.png" alt="小兔鲜儿轮播图" /></a>
+                </li>
+            </ul>
+
+            <!-- 侧导航 -->
+            <div class="aside">
+                <ul>
+                    <li>
+                        <a href="#">生鲜<span>水果 蔬菜</span></a>
+                    </li>
+                    <li>
+                        <a href="#">美食 <span>面点 干果</span></a>
+                    </li>
+                    <li>
+                        <a href="#">餐厨 <span>数码产品</span> </a>
+                    </li>
+                    <li>
+                        <a href="#">电器 <span>床品 四件套 被枕</span> </a>
+                    </li>
+                    <li>
+                        <a href="#">居家 <span>奶粉 玩具 辅食</span> </a>
+                    </li>
+                    <li>
+                        <a href="#">洗护 <span>洗发 洗护 美妆</span> </a>
+                    </li>
+                    <li>
+                        <a href="#">孕婴 <span>奶粉 玩具 </span></a>
+                    </li>
+                    <li>
+                        <a href="#">服饰 <span>女装 男装</span> </a>
+                    </li>
+                    <li>
+                        <a href="#">杂货 <span>户外 图书 </span></a>
+                    </li>
+                    <li>
+                        <a href="#">品牌 <span>品牌制造</span> </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 箭头 -->
+            <a href="#" class="prev"></a>
+            <a href="#" class="next"></a>
+
+            <!-- 圆点 -->
+            <ol>
+                <li></li>
+                <li></li>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 新鲜好物 -->
+    <div class="goods wrapper">
+        <div class="hd">
+            <h2>新鲜好物<span>新鲜出炉 品质靠谱</span></h2>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="bd clearfix">
+            <ul>
+                <li>
+                    <a href="#"
+                        ><img src="1.png" alt="睿米无线吸尘器F8" />
+                        <h3>睿米无线吸尘器F8</h3>
+                        <div>￥<span>899</span></div>
+                        <p>新品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        ><img src="1.png" alt="智能环绕3D空调" />
+                        <h3>智能环绕3D空调</h3>
+                        <div>￥<span>1299</span></div>
+                        <p>新品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        ><img src="1.png" alt="广东软软糯米煲仔饭" />
+                        <h3>广东软软糯米煲仔饭</h3>
+                        <div>￥<span>129</span></div>
+                        <p>新品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        ><img src="1.png" alt="罗西机械智能手表" />
+                        <h3>罗西机械智能手表</h3>
+                        <div>￥<span>3399</span></div>
+                        <p>新品</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 人气推荐 -->
+    <div class="popularity wrapper">
+        <div class="hd">
+            <h2>人气推荐<span>人气爆款 不容错过 </span></h2>
+        </div>
+        <div class="bd clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="2.png" alt="特惠推荐" />
+                        <h3>特惠推荐</h3>
+                        <span>我猜得到 你的需要</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="2.png" alt="爆款推荐" />
+                        <h3>爆款推荐</h3>
+                        <span>人气好物推荐</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="2.png" alt="场景使用一站买全" />
+                        <h3>场景使用一站买全</h3>
+                        <span>编辑精心整理推荐</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="2.png" alt="领券中心" />
+                        <h3>领券中心</h3>
+                        <span>发现更多超值优惠券</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 热门品牌 -->
+    <div class="popular">
+        <div class="wrapper">
+            <div class="hd">
+                <h3>热门品牌</h3>
+                <p>国际经典 品质保证</p>
+                <a href="#" class="right"></a>
+                <a href="#" class="left"></a>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="品牌商品1" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="品牌商品2" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="品牌商品3" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="品牌商品4" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="品牌商品5" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 生鲜 -->
+    <div class="fresh_produce wrapper">
+        <div class="hd">
+            <h2>生鲜</h2>
+            <a href="#" class="more">查看全部</a>
+            <ul>
+                <li><a href="#">水果</a></li>
+                <li><a href="#">蔬菜</a></li>
+                <li><a href="#">肉禽蛋</a></li>
+                <li><a href="#">裤装</a></li>
+                <li><a href="#">衬衫</a></li>
+                <li><a href="#">T恤</a></li>
+                <li><a href="#">内衣</a></li>
+            </ul>
+        </div>
+        <div class="bd clearfix">
+            <div class="left">
+                <a href="#">
+                    <img src="1.png" alt="生鲜封面" />
+                </a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="美威三文鱼" />
+                            <p>美威 智利原味三文鱼排</p>
+                            <p>240g/袋 4片装</p>
+                            <p>海鲜年货</p>
+                            <div>￥<span>59</span></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="红功夫小龙虾" />
+                            <p>红功夫 麻辣小龙虾1.5kg</p>
+                            <p>4-6钱/25-32只</p>
+                            <p>火锅食材</p>
+                            <div>￥<span>79</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="三都港黄花鱼" />
+                            <p>三都港 冷冻无公害黄花鱼</p>
+                            <p>700g 2条 袋装</p>
+                            <p>海鲜水产</p>
+                            <div>￥<span>49</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="渔公码头海参" />
+                            <p>渔公码头 大连鲜食入味</p>
+                            <p>即食海参 辽参刺参</p>
+                            <p>调味海</p>
+                            <div>￥<span>899</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="越南火龙果" />
+                            <p>越南白心火龙果4个装</p>
+                            <p>标准果400-550g</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>20</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="广西沃柑" />
+                            <p>广西沃柑 新鲜水果</p>
+                            <p>柑橘1.5kg</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>20</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="进口牛油果" />
+                            <p>进口 牛油果 6个装</p>
+                            <p>单果重约130-180g</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>50</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="1.png" alt="泰国山竹" />
+                            <p>泰国进口山竹5A级</p>
+                            <p>240g/袋 4片装</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>60</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 服饰 -->
+    <div class="clothes_goods wrapper">
+        <div class="hd">
+            <h2>服饰</h2>
+            <a href="#" class="more">查看全部</a>
+            <ul>
+                <li><a href="#">运动裤</a></li>
+                <li><a href="#">卫衣/套头衫</a></li>
+                <li><a href="#">运动夹克/风衣</a></li>
+                <li><a href="#">运动T恤</a></li>
+                <li><a href="#">运动套装</a></li>
+                <li><a href="#">运动羽绒服</a></li>
+                <li><a href="#">运动配饰</a></li>
+            </ul>
+        </div>
+        <div class="bd clearfix">
+            <div class="left">
+                <a href="#">
+                    <img src="2.png" alt="服饰封面" />
+                    <div class="box">
+                        <div class="one">
+                            <span>服饰馆</span>
+                        </div>
+                        <div class="two">
+                            <span>3折起狂欢</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品1" />
+                            <p>美威 智利原味三文鱼排</p>
+                            <p>240g/袋 4片装</p>
+                            <p>海鲜年货</p>
+                            <div>￥<span>59</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品2" />
+                            <p>红功夫 麻辣小龙虾1.5kg</p>
+                            <p>4-6钱/25-32只</p>
+                            <p>火锅食材</p>
+                            <div>￥<span>79</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品3" />
+                            <p>三都港 冷冻无公害黄花鱼</p>
+                            <p>700g 2条 袋装</p>
+                            <p>海鲜水产</p>
+                            <div>￥<span>49</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品4" />
+                            <p>渔公码头 大连鲜食入味</p>
+                            <p>即食海参 辽参刺参</p>
+                            <p>调味海</p>
+                            <div>￥<span>899</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品5" />
+                            <p>越南白心火龙果4个装</p>
+                            <p>标准果400-550g</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>20</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品6" />
+                            <p>广西沃柑 新鲜水果</p>
+                            <p>柑橘1.5kg</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>20</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品7" />
+                            <p>进口 牛油果 6个装</p>
+                            <p>单果重约130-180g</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>50</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="2.png" alt="服饰商品8" />
+                            <p>泰国进口山竹5A级</p>
+                            <p>240g/袋 4片装</p>
+                            <p>新鲜水果</p>
+                            <div>￥<span>60</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 最新专题 -->
+    <div class="topic_goods">
+        <div class="wrapper">
+            <div class="hd">
+                <h3>最新专题</h3>
+                <a href="#" class="more">查看全部</a>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="3.png" alt="专题1" />
+                            <div class="box">
+                                <p>吃这些美食才不算辜负自己</p>
+                                <div>餐厨起居洗护好物</div>
+                                <span>￥29.9起</span>
+                            </div>
+                            <div class="bottom">
+                                <span><i class="ri-heart-line"></i>1220</span>
+                                <span><i class="ri-eye-line"></i>1800</span>
+                                <span class="right">
+                                    <i class="ri-message-2-line"></i>246
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="3.png" alt="专题2" />
+                            <div class="box">
+                                <p>吃这些美食才不算辜负自己</p>
+                                <div>餐厨起居洗护好物</div>
+                                <span>￥29.9起</span>
+                            </div>
+                            <div class="bottom">
+                                <span><i class="ri-heart-fill red"></i>1220</span>
+                                <span><i class="ri-eye-line"></i>1800</span>
+                                <span class="right">
+                                    <i class="ri-message-2-line"></i>246
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="3.png" alt="专题3" />
+                            <div class="box">
+                                <p>吃这些美食才不算辜负自己</p>
+                                <div>餐厨起居洗护好物</div>
+                                <span>￥29.9起</span>
+                            </div>
+                            <div class="bottom">
+                                <span><i class="ri-heart-line"></i>1220</span>
+                                <span><i class="ri-eye-line"></i>1800</span>
+                                <span class="right">
+                                    <i class="ri-message-2-line"></i>246
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 服务 -->
+    <div class="service wrapper">
+        <div class="customer">
+            <h4>客户服务</h4>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="ri-message-3-fill size"></i>
+                        <p>在线客服</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-questionnaire-fill size"></i>
+                        <p>问题反馈</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="about">
+            <h4>关注我们</h4>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="ri-question-answer-line size"></i>
+                        <p>公众号</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-weibo-fill size"></i>
+                        <p>微博</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="download">
+            <h4>下载APP</h4>
+            <div class="left">
+                <i class="ri-qr-code-line size"></i>
+            </div>
+            <div class="right">
+                <p>扫描二维码</p>
+                <p>立即下载APP</p>
+                <a href="#">下载页面</a>
+            </div>
+        </div>
+
+        <div class="phone">
+            <h4>服务热线</h4>
+            <span>400-0000-000</span>
+            <p>周一至周日 8:00-18:00</p>
+        </div>
+    </div>
+
+    <!-- 版权 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li>
+                        <span>价格亲民</span>
+                    </li>
+                    <li>
+                        <span>物流快捷</span>
+                    </li>
+                    <li>
+                        <span>品质新鲜</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a>
+                    |
+                    <a href="#">帮助中心</a>
+                    |
+                    <a href="#">售后服务</a>
+                    |
+                    <a href="#">配送与验收</a>
+                    |
+                    <a href="#">商务合作</a>
+                    |
+                    <a href="#">搜索推荐</a>
+                    |
+                    <a href="#">友情链接</a>
+                </p>
+                <p>CopyRight @ 小兔鲜儿</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
